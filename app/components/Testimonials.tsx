@@ -1,0 +1,11 @@
+'use client';
+
+const testimonials=[
+{n:'Healthcare Website Owner',r:'Fast, responsive and clear communication. The final WordPress site made our services easier to understand and helped us present a more trustworthy healthcare brand.',s:'Healthcare WordPress build',rate:5},
+{n:'Travel Business Client',r:'Adeel understood the booking flow properly and converted the idea into a clean, mobile-friendly experience. The package sections and CTAs became much easier for customers.',s:'Travel / booking website',rate:5},
+{n:'Corporate Services Founder',r:'The website structure became much more professional. Services, trust sections and inquiry flow were handled with strong attention to detail.',s:'Corporate Elementor website',rate:5},
+{n:'Local Service Brand',r:'The build felt clean, practical and conversion-focused. Mobile spacing, contact buttons and service sections were improved in a way that actually helps visitors take action.',s:'Local business website',rate:5},
+{n:'Agency Collaboration',r:'Reliable WordPress support, clean Elementor work and solid troubleshooting. Adeel is easy to work with when a site needs practical fixes and launch support.',s:'WordPress fixes and support',rate:5}
+];
+function Stars({rate}:{rate:number}){return <div className="stars" aria-label={`${rate} out of 5 stars`}>{Array.from({length:5}).map((_,i)=><span key={i}>★</span>)}</div>}
+export default function Testimonials(){return <section className="testimonials section"><div className="wrap testimonial-layout"><div className="testimonial-copy"><span className="eyebrow">Client Feedback</span><h2 className="title">Testimonials that show the value behind the build</h2><p className="muted">Draft review cards for the portfolio. Replace the names with verified client names whenever you want to publish real testimonials.</p><div className="chips"><span className="chip">5.0 quality mindset</span><span className="chip">Responsive support</span><span className="chip">Client-ready delivery</span></div></div><div className="review-stack">{testimonials.map((t,i)=><article className="review-card" style={{'--i':i} as React.CSSProperties} key={t.n}><div><Stars rate={t.rate}/><p className="review-text">“{t.r}”</p></div><div className="review-author"><div><b>{t.n}</b><span>{t.s}</span></div><small>0{i+1}</small></div></article>)}</div></div></section>}
