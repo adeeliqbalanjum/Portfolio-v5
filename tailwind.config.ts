@@ -1,1 +1,2 @@
-import type{Config}from'tailwindcss';export default{content:['./app/**/*.{ts,tsx}','./data/**/*.ts'],theme:{extend:{}},plugins:[]} satisfies Config;
+import type{Config}from'tailwindcss';
+export default{content:['./app/**/*.{ts,tsx}','./components/**/*.{ts,tsx}','./data/**/*.ts'],theme:{extend:{colors:{background:'var(--bg)',foreground:'var(--text)',accent:'var(--surface)','accent-foreground':'var(--text)',destructive:'var(--text)',secondary:'var(--bg)',primary:'#F6C945','primary-foreground':'var(--bg)',muted:'var(--surface)','muted-foreground':'var(--muted)'}}},plugins:[]} satisfies Config;
